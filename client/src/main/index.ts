@@ -4,11 +4,11 @@ import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 
 function createWindow(): void {
-  // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 900,
-    height: 670,
+    width: 1200,
+    height: 800,
     show: false,
+    frame: false,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
@@ -70,5 +70,8 @@ app.on('window-all-closed', () => {
   }
 })
 
-// In this file you can include the rest of your app"s specific main process
-// code. You can also put them in separate files and require them here.
+ipcMain.on('close-window', () => BrowserWindow.getFocusedWindow()?.close())
+ipcMain.on('minimize-window', () => BrowserWindow.getFocusedWindow()?.minimize())
+ipcMain.on('maximize-window', () => BrowserWindow.getFocusedWindow()?.maximize())
+ipcMain.on('unmaximize-window', () => BrowserWindow.getFocusedWindow()?.unmaximize())
+ipcMain.handle('is-maximized', () => BrowserWindow.getFocusedWindow()?.isMaximized())
