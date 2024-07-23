@@ -1,5 +1,5 @@
-import { Minimize, Minus, Square, X } from 'lucide-react'
-import { useCallback, useEffect, useState } from 'react'
+import { Minimize, Minus, Square, X } from "lucide-react"
+import { useCallback, useEffect, useState } from "react"
 
 const electron = window.electronWindow
 
@@ -23,7 +23,6 @@ const TitleBar = () => {
   useEffect(() => {
     const checkMaximized = async () => {
       const result = await electron.isMaximized()
-      console.log(result)
       setIsMaximized(result)
     }
     checkMaximized()

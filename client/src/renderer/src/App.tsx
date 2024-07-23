@@ -1,5 +1,5 @@
-import Player from './components/player/Player'
-import TitleBar from './components/TitleBar'
+import Player from "./components/player/Player"
+import TitleBar from "./components/TitleBar"
 
 const App = () => {
   return (
