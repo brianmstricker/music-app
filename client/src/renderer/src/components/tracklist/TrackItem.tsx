@@ -8,7 +8,7 @@ const TrackItem = memo(({ track }: { track: TrackType }) => {
   }))
   const randomColor = useMemo(() => Math.floor(Math.random() * 16777215).toString(16), [])
   const trackDoubleClick = useCallback((_e: React.MouseEvent, track: TrackType) => {
-    update({ currentTrack: track, playing: true })
+    update({ currentTrack: track.id, playing: true })
   }, [])
   return (
     <div

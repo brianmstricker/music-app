@@ -21,7 +21,8 @@ export type StoreType = {
   playing: boolean
   muted: "true" | "false"
   volume: number
-  currentTrack: null | TrackType //todo: change to ID with actual data
+  secondsPlayed: number
+  currentTrack: null | ID
   queue: TrackType[]
   update: (payload: Partial<StoreType>) => void
 }

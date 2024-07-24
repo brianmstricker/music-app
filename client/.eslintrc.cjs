@@ -10,6 +10,7 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "prettier/prettier": "off",
-    "react/display-name": "off"
+    "react/display-name": "off",
+    "@typescript-eslint/ban-ts-comment": "off"
   }
 }

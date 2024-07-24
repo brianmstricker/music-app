@@ -21,7 +21,7 @@ const artistData = [
   }
 ]
 
-export const data: TrackType[] = [
+export const tracks: TrackType[] = [
   {
     id: 1,
     name: "Bye",

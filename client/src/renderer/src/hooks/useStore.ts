@@ -7,5 +7,6 @@ export const Store = create<StoreType>((set) => ({
   muted: "false",
   volume: 0.25,
   currentTrack: null,
+  secondsPlayed: 0,
   update: (payload) => set((state) => ({ ...state, ...payload }))
 }))

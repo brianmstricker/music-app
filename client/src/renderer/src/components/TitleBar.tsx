@@ -28,9 +28,21 @@ const TitleBar = () => {
     checkMaximized()
   }, [])
   return (
-    <div className="flex justify-between items-center border-b border-b-white/10 h-12">
+    <div
+      className="flex justify-between items-center border-b border-b-white/10 h-12"
+      style={{
+        // @ts-ignore
+        WebkitAppRegion: "drag"
+      }}
+    >
       <h1 className="font-bold text-lg ml-3">Music App</h1>
-      <div className="flex items-center h-full">
+      <div
+        className="flex items-center h-full"
+        style={{
+          // @ts-ignore
+          WebkitAppRegion: "no-drag"
+        }}
+      >
         <button
           onClick={minimizeWindow}
           className="h-full flex items-center justify-center hover:bg-neutral-600 px-3"
